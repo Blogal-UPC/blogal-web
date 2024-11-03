@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from './material/material.module';
 import { NavbarWriterComponent } from './shared/components/navbar-writer/navbar-writer.component';
 import { NavbarReaderComponent } from './shared/components/navbar-reader/navbar-reader.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -38,9 +40,12 @@ import { ArticleDetailComponent } from './pages/article/article-detail/article-d
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
