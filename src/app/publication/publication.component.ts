@@ -9,6 +9,7 @@ export class PublicationComponent {
   content: string = '';
   coauthors: string[] = [];
   previewContent: string = '';
+  solo_suscriptores: boolean = false;
 
   addCoauthor(coauthor: string) {
     if (coauthor) {

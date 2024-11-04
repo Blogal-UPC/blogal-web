@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { MatRadioModule } from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -45,7 +46,9 @@ import { PublicationComponent } from './publication/publication.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
   providers: [
     provideAnimationsAsync()
