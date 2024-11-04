@@ -1,38 +1,46 @@
-.editor-container {
-    padding: 20px;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .text-editor {
-    width: 100%;
-    height: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
-  .toolbar {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
-  .toolbar button {
-    padding: 8px 12px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .coauthors-list {
-    margin-top: 20px;
-  }
-  
-  .coauthors-list h4 {
-    margin-bottom: 5px;
-  }
-  
+.publication-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.coauthors-section, .article-section, .preview-section, .templates-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

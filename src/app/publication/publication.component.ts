@@ -1,4 +1,3 @@
-// publication.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,18 +8,30 @@ import { Component } from '@angular/core';
 export class PublicationComponent {
   content: string = '';
   coauthors: string[] = [];
+  previewContent: string = '';
 
-  addCoauthor(coauthorName: string) {
-    if (coauthorName && !this.coauthors.includes(coauthorName)) {
-      this.coauthors.push(coauthorName);
+  addCoauthor(coauthor: string) {
+    if (coauthor) {
+      this.coauthors.push(coauthor);
     }
   }
 
-  previewContent() {
-    // Implement preview logic here
+  updatePreview(content: string) {
+    this.previewContent = content;
   }
 
-  publishContent() {
-    // Implement publish logic here
+  publish() {
+    // Lógica para publicar la publicación
+    console.log('Publicación publicada con coautores:', this.coauthors);
+    console.log('Contenido del artículo:', this.content);
+  }
+
+  importTemplate(template: string) {
+    // Lógica para importar la plantilla seleccionada
+    if (template === 'academic') {
+      this.content = 'Plantilla de Texto Académico\n\n[Escribe tu contenido académico aquí...]';
+    } else if (template === 'blog') {
+      this.content = 'Plantilla de Blog\n\n[Escribe tu contenido de blog aquí...]';
+    }
   }
 }

@@ -1,19 +1,40 @@
-<div class="editor-container">
-    <textarea
-      [(ngModel)]="content"
-      placeholder="Escribe tu publicación aquí..."
-      class="text-editor"
-    ></textarea>
-    <div class="toolbar">
-      <button (click)="addCoauthor('Coauthor Name')">Agregar Coautor</button>
-      <button (click)="previewContent()">Vista Previa</button>
-      <button (click)="publishContent()">Publicar</button>
+<div class="publication-container">
+    <h2>Publicación</h2>
+    
+    <!-- Textbox para coautores -->
+    <div class="coauthors-section">
+      <h3>Agregar Coautores</h3>
+      <input #coauthorInput type="text" placeholder="Nombre del coautor" />
+      <button type="button" (click)="addCoauthor(coauthorInput.value)">Agregar Coautor</button>
     </div>
-    <div class="coauthors-list">
-      <h4>Coautores:</h4>
-      <ul>
-        <li *ngFor="let coauthor of coauthors">{{ coauthor }}</li>
-      </ul>
+    
+    <!-- Lista de coautores -->
+    <ul>
+      <li *ngFor="let coauthor of coauthors">{{ coauthor }}</li>
+    </ul>
+    
+    <!-- Textbox para escribir el artículo -->
+    <div class="article-section">
+      <h3>Escribir Artículo</h3>
+      <textarea [(ngModel)]="content" placeholder="Escribe tu artículo aquí..." rows="10" cols="50"></textarea>
     </div>
-  </div>
-  
+    
+    <!-- Vista previa -->
+    <div class="preview-section">
+      <h3>Vista Previa</h3>
+      <div class="preview-content">{{ content }}</div>
+    </div>
+    
+    <!-- Botón de publicar -->
+    <button type="button" (click)="publish()">Publicar</button>
+    
+    <!-- Importar plantillas -->
+    <div class="templates-section">
+      <h3>Importar Plantillas</h3>
+      <select #templateSelect title="Seleccionar Plantilla">
+        <option value="academic">Texto Académico</option>
+        <option value="blog">Blog</option>
+      </select>
+      <button type="button" (click)="importTemplate(templateSelect.value)">Importar Plantilla</button>
+    </div>
+</div>
