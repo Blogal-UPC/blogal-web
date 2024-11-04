@@ -1,0 +1,19 @@
+<div class="editor-container">
+    <textarea
+      [(ngModel)]="content"
+      placeholder="Escribe tu publicación aquí..."
+      class="text-editor"
+    ></textarea>
+    <div class="toolbar">
+      <button (click)="addCoauthor('Coauthor Name')">Agregar Coautor</button>
+      <button (click)="previewContent()">Vista Previa</button>
+      <button (click)="publishContent()">Publicar</button>
+    </div>
+    <div class="coauthors-list">
+      <h4>Coautores:</h4>
+      <ul>
+        <li *ngFor="let coauthor of coauthors">{{ coauthor }}</li>
+      </ul>
+    </div>
+  </div>
+  
