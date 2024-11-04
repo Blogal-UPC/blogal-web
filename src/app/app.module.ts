@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { WriterLayoutComponent } from './pages/writer/writer-layout/writer-layou
 import { AuthLayoutComponent } from './pages/auth/auth-layout/auth-layout.component';
 import { ArticleCatalogComponent } from './pages/article/article-catalog/article-catalog.component';
 import { ArticleDetailComponent } from './pages/article/article-detail/article-detail.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,14 @@ import { ArticleDetailComponent } from './pages/article/article-detail/article-d
     WriterLayoutComponent,
     AuthLayoutComponent,
     ArticleCatalogComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()

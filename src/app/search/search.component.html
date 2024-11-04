@@ -1,0 +1,19 @@
+<div class="search-container">
+    <input
+      type="text"
+      placeholder="Buscar publicaciones..."
+      [(ngModel)]="searchText"
+      (input)="onSearch()"
+      class="search-input"
+    />
+    <div *ngIf="filteredPosts.length === 0" class="no-results">
+      No se encontraron resultados.
+    </div>
+    <ul *ngIf="filteredPosts.length > 0" class="results-list">
+      <li *ngFor="let post of filteredPosts" class="result-item">
+        <h3>{{ post.title }}</h3>
+        <p>Etiquetas: {{ post.tags.join(', ') }}</p>
+      </li>
+    </ul>
+  </div>
+  
