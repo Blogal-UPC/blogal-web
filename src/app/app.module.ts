@@ -22,6 +22,7 @@ import { AuthLayoutComponent } from './pages/auth/auth-layout/auth-layout.compon
 import { ArticleCatalogComponent } from './pages/article/article-catalog/article-catalog.component';
 import { ArticleDetailComponent } from './pages/article/article-detail/article-detail.component';
 import { PublicationComponent } from './publication/publication.component';
+import { EarningsComponent } from './pages/earnings/earnings.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PublicationComponent } from './publication/publication.component';
     AuthLayoutComponent,
     ArticleCatalogComponent,
     ArticleDetailComponent,
-    PublicationComponent
+    PublicationComponent,
+    EarningsComponent
   ],
   imports: [
     BrowserModule,
