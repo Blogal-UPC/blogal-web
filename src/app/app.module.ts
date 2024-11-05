@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -21,6 +23,10 @@ import { AuthLayoutComponent } from './pages/auth/auth-layout/auth-layout.compon
 import { ArticleCatalogComponent } from './pages/article/article-catalog/article-catalog.component';
 import { ArticleDetailComponent } from './pages/article/article-detail/article-detail.component';
 import { SearchComponent } from './search/search.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -39,13 +45,21 @@ import { SearchComponent } from './search/search.component';
     AuthLayoutComponent,
     ArticleCatalogComponent,
     ArticleDetailComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    MatChipsModule,
+    MatListModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
