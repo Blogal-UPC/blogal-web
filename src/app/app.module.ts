@@ -24,6 +24,7 @@ import { ArticleDetailComponent } from './pages/article/article-detail/article-d
 import { PublicationComponent } from './publication/publication.component';
 import { EarningsComponent } from './pages/earnings/earnings.component';
 import { QuestionsComponent } from './pages/questions/questions.component';
+import { TutorialComponent } from './pages/tutorial/tutorial.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { QuestionsComponent } from './pages/questions/questions.component';
     ArticleDetailComponent,
     PublicationComponent,
     EarningsComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,
