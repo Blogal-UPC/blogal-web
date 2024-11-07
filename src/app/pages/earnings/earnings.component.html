@@ -1,1 +1,26 @@
-<p>earnings works!</p>
+<div class="earnings-dashboard">
+    <h2>Panel de Monetizacion</h2>
+    <div class="earnings-summary">
+        <h3>Ganancias totales: ${{ totalEarnings }}</h3>
+        <p>Donaciones: ${{ donations }}</p>
+        <p>Suscripciones: ${{ subscriptions }}</p>
+    </div>
+
+    <div class="earnings-breakdown">
+        <h4>Ganancias por mes</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Total ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let entry of earningsByDate">
+                    <td>{{ entry.date }}</td>
+                    <td>{{ entry.amount }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
