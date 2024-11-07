@@ -23,6 +23,7 @@ import { ArticleCatalogComponent } from './pages/article/article-catalog/article
 import { ArticleDetailComponent } from './pages/article/article-detail/article-detail.component';
 import { PublicationComponent } from './publication/publication.component';
 import { EarningsComponent } from './pages/earnings/earnings.component';
+import { QuestionsComponent } from './pages/questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EarningsComponent } from './pages/earnings/earnings.component';
     ArticleCatalogComponent,
     ArticleDetailComponent,
     PublicationComponent,
-    EarningsComponent
+    EarningsComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
