@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+      <a href="/" class="brand-logo">Blogal</a>
+      <button class="navbar-toggler" (click)="toggleNavbar()">
+        &#9776; <!-- Hamburger icon -->
+      </button>
+    </div>
+    
+    <ul [ngClass]="{'nav-links': true, 'active': navbarOpen}">
+      <li><a routerLink="/">Inicio</a></li>
+      <li><a routerLink="/earnings">Ingresos</a></li>
+      <li><a routerLink="/tutorial">Tutorial</a></li>
+      <li><a routerLink="/questions">Preguntas</a></li>
+      <li><a routerLink="/logout">Logout</a></li>
+    </ul>
+  </nav>
+  
