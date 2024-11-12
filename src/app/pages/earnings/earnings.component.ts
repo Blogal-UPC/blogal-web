@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./earnings.component.css']
 })
 export class EarningsComponent implements OnInit {
-    // Declare local variables for earnings
     totalEarnings: number = 1500;
     donations: number = 600;
     subscriptions: number = 900;
     earningsByDate: { date: string, amount: number }[] = [];
 
     ngOnInit() {
-        // Initialize earnings data directly in ngOnInit
         this.earningsByDate = [
             { date: 'Noviembre 2024', amount: 150 },
             { date: 'Octubre 2024', amount: 200 },

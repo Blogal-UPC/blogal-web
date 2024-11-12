@@ -1,70 +1,46 @@
-/* Navbar Container */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #6ea4f6;
     color: white;
     padding: 1em;
-  }
+}
   
-  .navbar-brand {
+.navbar-brand {
     display: flex;
     align-items: center;
-  }
+}
   
-  .brand-logo {
-    color: white;
+.brand-logo {
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
-  }
+}
   
-  .navbar-toggler {
+.navbar-toggler {
     font-size: 1.5em;
-    color: white;
+    color: #ffffff;
     background: none;
     border: none;
     cursor: pointer;
-    display: none; /* Hidden by default for larger screens */
-  }
+    display: none;
+}
   
-  .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 1em;
-  }
+}
   
-  .nav-links li a {
-    color: white;
+.nav-links li a {
+    color: #ffffff;
     text-decoration: none;
     font-size: 1em;
     transition: color 0.3s;
-  }
+}
   
-  .nav-links li a:hover {
+.nav-links li a:hover {
     color: #ccc;
-  }
-  
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    .navbar-toggler {
-      display: block; /* Show toggle button on smaller screens */
-    }
-  
-    .nav-links {
-      display: none; /* Hide links by default */
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      padding: 1em;
-    }
-  
-    .nav-links.active {
-      display: flex; /* Show links when active */
-    }
-  }
-  
+}
